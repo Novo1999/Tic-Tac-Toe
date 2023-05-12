@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  background-color: black;
+  overflow: hidden;
+}
+.container {
+  width: 20rem;
+  height: 20rem;
+  border: 2px solid white;
+  color: white;
+  margin: 17rem auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-box {
+  background-color: aliceblue;
+  border: 1px solid rgb(224, 14, 25);
+}
+h1 {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 16rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
