@@ -1,14 +1,16 @@
 * {
   box-sizing: border-box;
+  /* overflow: hidden; */
+}
+body {
   background-color: black;
-  overflow: hidden;
 }
 .container {
   width: 20rem;
   height: 20rem;
   border: 2px solid white;
   color: white;
-  margin: 17rem auto;
+  margin: 8rem auto;
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
@@ -16,12 +18,109 @@
 .grid-box {
   background-color: aliceblue;
   border: 1px solid rgb(224, 14, 25);
+  cursor: pointer;
+  color: black;
+  text-align: center;
 }
-h1 {
+.signChoice {
+  border: 2px solid white;
+  height: 4rem;
+  width: 20rem;
+  display: flex;
+  margin: auto;
+}
+h1,
+.choice {
   color: white;
   text-align: center;
   position: relative;
-  top: 16rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 5rem 3rem;
+}
+
+.active-player {
+  background: linear-gradient(to right, red, blue);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.choice-border {
+  border: 1px solid red;
+}
+
+.crossBtn {
+  height: 3.2rem;
+  width: 3.5rem;
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(95%);
+  margin-top: 5px;
+  z-index: 2;
+}
+.circleBtn {
+  height: 3.2rem;
+  width: 3.5rem;
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(350%);
+  margin-top: 5px;
+  z-index: 2;
+}
+.cross-choice::before,
+.cross-choice::after {
+  position: absolute;
+  content: " ";
+  height: 50px;
+  width: 2px;
+  background-color: rgb(255, 0, 0);
+  margin-top: 5px;
+  margin-left: 5rem;
+  z-index: 1;
+}
+.cross-choice::before {
+  transform: rotate(45deg);
+}
+.cross-choice::after {
+  transform: rotate(-45deg);
+}
+
+.circle-choice::before,
+.circle-choice::after {
+  position: absolute;
+  content: " ";
+  transform: translate(-50%);
+  height: 40px;
+  width: 40px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-top: 7.5px;
+  margin-left: 14rem;
+}
+
+.cross::before,
+.cross::after {
+  position: absolute;
+  content: " ";
+  height: 80px;
+  width: 2px;
+  background-color: rgb(255, 0, 0);
+  margin-top: 5px;
+}
+.cross::before {
+  transform: rotate(45deg);
+}
+.cross::after {
+  transform: rotate(-45deg);
+}
+.circle::before,
+.circle::after {
+  position: absolute;
+  content: " ";
+  transform: translate(-50%);
+  height: 70px;
+  width: 70px;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  margin-top: 7.5px;
 }
